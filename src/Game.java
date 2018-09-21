@@ -20,6 +20,7 @@ class Game {
     }
 
     String currentAnswer() {
+
         return String.join("", currentUserAnswer);
     }
 
@@ -62,7 +63,7 @@ class Game {
             for (Object position : positions) {
                 // if position match
                 // and position is to be filled within currentUserAnswer
-                if (i == (Integer) position) { // || currentUserAnswer.get(j).equals("_")
+                if (i == (Integer) position) {
                     currentUserAnswer.set(i, "" + finalAnswer.charAt(i));
                 }
             }
