@@ -10,10 +10,6 @@ class MoviePicker {
 
     //constructor
     MoviePicker(String fileName) throws FileNotFoundException {
-        // parsear arquivo com caminho fileName
-        // adicionar linha a linha do arquivo no
-        // array this.movies
-
         File file = new File(fileName);
         Scanner scanner = new Scanner(file);
         while (scanner.hasNextLine()) {
@@ -22,11 +18,8 @@ class MoviePicker {
     }
 
     String pick() {
-        // retorna uma posição randomica do array
-        // this.movies
+        // returns a random list element
         int randomNumber = (int) ((Math.random() * moviesList.size()) - 1);
-//        System.out.println("\nRandom Number: "+ randomNumber);
-
         return moviesList.get(randomNumber);
     }
 }
